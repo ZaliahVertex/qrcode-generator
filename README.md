@@ -1,6 +1,6 @@
 # 🎯 PowerShell QR Code Generator
 
-Welcome to the **PowerShell QR Code Generator** – a beautifully simple and customizable tool that lets you create stylish QR codes directly from your terminal. No bloated UI, just instant results with full control!
+A quick QR code generator I made for my partner at their request. Pull requests welcome.
 
 ---
 
