@@ -7,12 +7,12 @@ Welcome to the **PowerShell QR Code Generator** – a beautifully simple and cus
 ## ✨ What it can do~
 
 ✅ Generate **high-quality QR codes** from URLs   
-✅ Output as PNG
-✅ **Terminal preview** as ASCII art to confirm creation of QR code worked 
-✅ Add **custom logo overlays** (png)  
-✅ Customize colors
-✅ You can create multiple QR codes in a row!
-✅ Works in **PowerShell 7+**
+✅ Output as PNG<br>
+✅ **Terminal preview** as ASCII art to confirm creation of QR code worked <br>
+✅ Add **custom logo overlays** (png)<br>
+✅ Customize colors<br>
+✅ You can create multiple QR codes in a row!<br>
+✅ Works in **PowerShell 7+**<br>
 
 ---
 
