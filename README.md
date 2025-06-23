@@ -22,9 +22,10 @@ Just run the script in **Powershell 7 or newer**, and it will:
 
 1. Ask you for a URL
 2. Ask for a name for the output file
-3. Check if a logo.png file exists and add it to the center (will be resized to fit in the center. If you don't want a logo, please use the /otherversions
-/QRGenerator.ps1 script instead!) 
-4. Generate both:
+3. Check if a logo.png file exists and add it to the center (will be resized to fit in the center.
+   - If you don't want a logo, please use the /otherversions/QRGenerator.ps1 script instead!)
+   - Make sure to move the script to the root folder, otherwise it won't parse the required DLL 
+5. Generate both:
    - A **terminal preview** using ASCII
    - A **PNG file** with customizable design
-5. Ask if you'd like to generate another
+6. Ask if you'd like to generate another
