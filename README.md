@@ -1,4 +1,4 @@
-# 🎯 PowerShell QR Code Generator
+# 📸 PowerShell QR Code Generator
 
 A quick QR code generator I made for my partner at their request. Pull requests welcome.
 
