@@ -15,7 +15,7 @@ A quick QR code generator I made for my partner at their request. Pull requests 
 
 ---
 
-## 🚀 How It Works
+## How It Works
 
 Just download QRCoder.dll and QRGeneratorFancy.ps1 then place them in a folder. From there, simply run the script in [**Powershell 7.5 or newer**](https://learn.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-windows), and it will:
 
