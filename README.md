@@ -11,7 +11,7 @@ A quick QR code generator I made for my partner at their request. Pull requests 
  - Preview as ASCII art to confirm creation of QR code worked <br>
  - Supports logo overlay in center (png)<br>
  - Customize colors<br>
- - Works in **PowerShell 7+**<br>
+ - Works in **PowerShell 7.5+**<br>
 
 ---
 
