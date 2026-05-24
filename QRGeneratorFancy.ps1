@@ -9,7 +9,7 @@ if (-not (Test-Path $qrcoderDll)) {
     exit
 }
 
-# Unblock in case it's blocked
+# Unblock dll in case it's blocked
 Unblock-File -Path $qrcoderDll
 Add-Type -Path $qrcoderDll
 
@@ -31,7 +31,7 @@ function Generate-QRCode {
 
  # Generate PNG
     $qrCode = [QRCoder.QRCode]::new($data)
-    $qrColor = [System.Drawing.Color]::FromArgb(48, 25, 52) # Dark purple
+    $qrColor = [System.Drawing.Color]::FromArgb(48, 25, 52)
     $white = [System.Drawing.Color]::White
     $qrBitmap = $qrCode.GetGraphic(
         20,
@@ -43,7 +43,7 @@ function Generate-QRCode {
         $true
     )
 
-# Composite the logo if provided
+# Composite the logo if exists
     if (Test-Path $logoPath) {
         $logo = [System.Drawing.Image]::FromFile($logoPath)
         $g = [System.Drawing.Graphics]::FromImage($qrBitmap)
@@ -53,22 +53,20 @@ function Generate-QRCode {
         $g.CompositingQuality = "HighQuality"
         $g.PixelOffsetMode = "HighQuality"
 
-       # Calculate logo size (15% of QR code size)
+       # Logo size (15% of QR code size)
         $logoScale = 0.15
         $logoSize = [int]($qrBitmap.Width * $logoScale)
         $logoX = [int](($qrBitmap.Width - $logoSize) / 2)
         $logoY = [int](($qrBitmap.Height - $logoSize) / 2)
 
-        # Define pastel color (light blue)
+        # Define pastel color
         $logobgColor = [System.Drawing.Color]::FromArgb(230, 230, 250) #lavender
         $brush = [System.Drawing.SolidBrush]::new($logobgColor)
         $backgroundRect = [System.Drawing.Rectangle]::new($logoX - 4, $logoY - 4, $logoSize + 8, $logoSize + 8)
         $g.FillEllipse($brush, $backgroundRect)
 
-        # Draw the logo
         $g.DrawImage($logo, $logoX, $logoY, $logoSize, $logoSize)
 
-        # Cleanup
         $g.Dispose()
         $logo.Dispose()
     }
